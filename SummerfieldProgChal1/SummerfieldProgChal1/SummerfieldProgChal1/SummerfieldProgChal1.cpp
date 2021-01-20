@@ -4,20 +4,20 @@ using namespace std;
 int main()
 {
 	// Vars
-	double hours, rate, pay;
+	double barSold, barCost, total;
 
 	// Inputs
-	cout << "How many hours? ";
-	cin >> hours;
+	cout << "How many candy bars sold? ";
+	cin >> barSold;
 
-	cout << "How much per hour? ";
-	cin >> rate;
+	cout << "How much does each candy bar cost? ";
+	cin >> barCost;
 
 	// Calc rate
-	pay = rate * hours;
+	total = barCost * barSold;
 
 	// Output
-	cout << "You earned $" << pay << endl;
+	cout << "You earned $" << total << endl;
 
 	return 0;
 }
