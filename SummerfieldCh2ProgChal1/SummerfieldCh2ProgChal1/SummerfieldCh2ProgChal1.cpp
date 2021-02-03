@@ -7,7 +7,7 @@ double total_cost = 0, tax_rate, tax_calc, tip_rate, tip_calc, subtotal_cost;
 int main()
 {
 	// Values from prompt
-    subtotal_cost = 44.50;
+	subtotal_cost = 44.50;
 	tax_rate = 0.0675;
 	tip_rate = 0.15;
 
