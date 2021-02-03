@@ -2,16 +2,22 @@
 using namespace std;
 
 // Vars
-double total_cost = 0, tax, tip_rate, subtotal_cost;
+double total_cost = 0, tax_rate, tax_calc, tip_rate, tip_calc, subtotal_cost;
 
 int main()
 {
 	// Values from prompt
     subtotal_cost = 44.50;
-	tax = 6.75;
+	tax_rate = 0.0675;
 	tip_rate = 0.15;
 
-	total_cost += (subtotal_cost / tax) + (subtotal_cost * tip_rate) + subtotal_cost;
+	// Calculate tax_calc and tip_calc
+	tax_calc = subtotal_cost * tax_rate;
+	tip_calc = (subtotal_cost + tax_calc) * tip_rate;
 
-	cout << "SUBTOTAL: $" << subtotal_cost << "\nTAX: $" << tax << "\nTIP: $" << tip_rate << "\nTOTAL COST: $" << total_cost << endl;
+	// Calculate total_cost
+	total_cost = tax_calc + tip_calc + subtotal_cost;
+	
+	// Output to user
+	cout << "SUBTOTAL: $" << subtotal_cost << "\nTAX: $" << tax_calc << "\nTIP: $" << tip_calc << "\nTOTAL COST: $" << total_cost << endl;
 }
