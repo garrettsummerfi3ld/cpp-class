@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SummerfieldCh4AlgWorkbench40", "SummerfieldCh4AlgWorkbench40\SummerfieldCh4AlgWorkbench40.vcxproj", "{4B2EB226-A6F5-4CA9-88C2-2F8E743912EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B2EB226-A6F5-4CA9-88C2-2F8E743912EF}.Debug|x64.ActiveCfg = Debug|x64
+		{4B2EB226-A6F5-4CA9-88C2-2F8E743912EF}.Debug|x64.Build.0 = Debug|x64
+		{4B2EB226-A6F5-4CA9-88C2-2F8E743912EF}.Debug|x86.ActiveCfg = Debug|Win32
+		{4B2EB226-A6F5-4CA9-88C2-2F8E743912EF}.Debug|x86.Build.0 = Debug|Win32
+		{4B2EB226-A6F5-4CA9-88C2-2F8E743912EF}.Release|x64.ActiveCfg = Release|x64
+		{4B2EB226-A6F5-4CA9-88C2-2F8E743912EF}.Release|x64.Build.0 = Release|x64
+		{4B2EB226-A6F5-4CA9-88C2-2F8E743912EF}.Release|x86.ActiveCfg = Release|Win32
+		{4B2EB226-A6F5-4CA9-88C2-2F8E743912EF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F360B25-604F-460B-8D83-0B71FBF6EF52}
+	EndGlobalSection
+EndGlobal
