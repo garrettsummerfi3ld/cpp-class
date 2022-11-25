@@ -1,20 +1,176 @@
-// Chapter18ProgChal5.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 
+using namespace std;
+
+/**
+ * \brief Class for linked lists
+ */
+class LinkedList
+{
+private:
+	/**
+	 * \brief A structure for the list
+	 */
+	struct ListNode
+	{
+		double data;
+		ListNode* next;
+	};
+
+	ListNode* head;
+public:
+	/**
+	 * \brief LinkedList constructor
+	 */
+	LinkedList()
+	{
+		head = new ListNode;
+		head->data = NULL;
+		head->next = NULL;
+	}
+
+	/**
+	 * \brief Adds a value to the end of the list
+	 * \param x Double value
+	 */
+	void add(double x)
+	{
+		ListNode* temp = head;
+		head = new ListNode;
+		head->next = temp;
+		head->data = x;
+	}
+
+	/**
+	 * \brief Checks if a value is a member of the linked list
+	 * \param x Inputs a value to check if this value is in the linked list
+	 * \return True if value is a member of a linked list, false if not a member
+	 */
+	bool isMember(double x)
+	{
+		ListNode* temp = head;
+		while (temp->data != NULL)
+		{
+			if (temp->data == x)
+			{
+				//the value is in the list
+				return true;
+			}
+			temp = temp->next;
+		}
+		return false;
+	}
+
+	/**
+	 * \breif LinkedList copy constructor
+	 * \param list LinkedList object to copy from
+	 */
+	LinkedList(const LinkedList& list)
+	{
+		ListNode* temp = list.head;
+		while (temp->data != NULL)
+		{
+			add(temp->data);
+			temp = temp->next;
+		}
+	}
+
+	/**
+	 * \brief Prints the contents of the linked list
+	 */
+	void printList()
+	{
+		ListNode* temp = head;
+		while (temp != nullptr)
+		{
+			cout << temp->data << endl;
+			temp = temp->next;
+		}
+	}
+
+	/**
+	 * \brief Destructor for linked lists
+	 */
+	~LinkedList()
+	{
+		ListNode* temp = head;
+		while (temp != nullptr)
+		{
+			ListNode* temp2 = temp;
+			temp = temp->next;
+			delete temp2;
+		}
+	}
+
+	/**
+	 * \brief Remove a value of the list
+	 * \param x Value to remove from a linked list
+	 */
+	void remove(double x)
+	{
+		ListNode* temp = head;
+		ListNode* prev = head;
+		while (temp->data != NULL)
+		{
+			if (temp->data == x)
+			{
+				prev->next = temp->next;
+				delete temp;
+				return;
+			}
+			prev = temp;
+			temp = temp->next;
+		}
+	}
+};
+
+/**
+ * \brief Test harness for the linked list class
+ * \return Graceful exit
+ */
 int main()
 {
-    std::cout << "Hello World!\n";
+	LinkedList listNodes;
+
+	// Add values to a list
+	listNodes.add(1.1);
+	listNodes.add(2.2);
+	listNodes.add(3.3);
+	listNodes.add(4.4);
+	listNodes.add(5.5);
+	listNodes.add(6.6);
+	listNodes.add(7.7);
+
+	// Check if a value is a member of the list
+	if (listNodes.isMember(1.1))
+	{
+		cout << "This element is a member of the list"<< endl;
+	}
+	else
+	{
+		cout << "Element is not a member of the list" << endl;
+	}
+
+	// Copy the list
+	LinkedList listNodes2(listNodes);
+	listNodes2.add(8.8);
+
+	// Check if a value is a member of the list
+	if (listNodes2.isMember(8.8))
+	{
+		cout << "This element is a member of the list" << endl;
+	}
+	else
+	{
+		cout << "Element is not a member of the list" << endl;
+	}
+
+	// Output lists
+	listNodes.printList();
+	listNodes2.printList();
+
+	listNodes.remove(1.1);
+	listNodes.printList();
+	
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
