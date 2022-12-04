@@ -11,3 +11,7 @@ First semester of C++, covers basics.
 ## Class2
 
 Second semester of C++, covers more advanced topics.
+
+### wxWidgets
+
+There are some projects that require the usage of [wxWidgets](https://www.wxwidgets.org/). [This](https://github.com/garrettsummerfi3ld/wxWidgetsInstallScript) Python script can automate the install on Windows-based systems.
