@@ -2,7 +2,7 @@
 
 Source code repository for a C++ Class for assignments and projects written.
 
-Requires **Visual Studio 2019** with *Desktop development with C++* selected.
+Requires **Visual Studio 2019/Visual Studio 2022** with *Desktop development with C++* selected, or on other systems a compatible C++ IDE for development with a working compiler.
 
 ## Class1
 
